@@ -1,0 +1,36 @@
+# Laravel
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+.env
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+/.idea
+/.vscode
+/.phpunit.result.cache
+/.DS_Store
+
+# Laravel 8+ storage symlink
+/storage/app/public
+!/public/storage
+
+# Ignore composer.lock if you want to manage dependencies manually
+# composer.lock
+
+# Ignore npm debug log
+npm-debug.log
+
+# Ignore yarn error log
+yarn-error.log
+
+# Ignore log files
+*.log
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore cPanel backup files
+backup-* 
