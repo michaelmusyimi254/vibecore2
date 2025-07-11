@@ -8,6 +8,22 @@ require __DIR__.'/auth.php';
 
 // Dashboard Routes for Different Roles
 Route::middleware(['auth'])->group(function () {
+    // General Dashboard Route (redirects based on role)
+    Route::get('/dashboard', function () {
+        $user = auth()->user();
+        if ($user->hasRole('admin')) {
+            return redirect()->route('admin.dashboard');
+        } elseif ($user->hasRole('trainer')) {
+            return redirect()->route('trainer.dashboard');
+        } elseif ($user->hasRole('facility')) {
+            return redirect()->route('facility.dashboard');
+        } elseif ($user->hasRole('vendor')) {
+            return redirect()->route('vendor.dashboard');
+        } else {
+            return redirect()->route('trainee.dashboard');
+        }
+    })->name('dashboard');
+
     // Trainee Dashboard
     Route::prefix('trainee')->middleware(['role:trainee'])->group(function () {
         Route::get('/dashboard', function () {
