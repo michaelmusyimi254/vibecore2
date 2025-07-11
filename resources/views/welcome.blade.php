@@ -1,165 +1,178 @@
-@extends('layouts.layoutFront')
+@php
+$configData = Helper::appClasses();
+@endphp
+
+@extends('layouts/layoutFront')
 
 @section('title', 'VibeCore - Your Complete Fitness & Wellness Platform')
 
+<!-- Vendor Styles -->
 @section('vendor-style')
-@vite(['resources/assets/vendor/libs/animate-on-scroll/animate-on-scroll.scss'])
+@vite(['resources/assets/vendor/libs/nouislider/nouislider.scss', 'resources/assets/vendor/libs/swiper/swiper.scss'])
 @endsection
 
+<!-- Page Styles -->
 @section('page-style')
 @vite(['resources/assets/vendor/scss/pages/front-page-landing.scss'])
 @endsection
 
+<!-- Vendor Scripts -->
 @section('vendor-script')
-@vite(['resources/assets/vendor/libs/animate-on-scroll/animate-on-scroll.js'])
+@vite(['resources/assets/vendor/libs/nouislider/nouislider.js', 'resources/assets/vendor/libs/swiper/swiper.js'])
 @endsection
 
+<!-- Page Scripts -->
 @section('page-script')
 @vite(['resources/assets/js/front-page-landing.js'])
 @endsection
 
 @section('content')
-<!-- Hero Section -->
-<section class="hero-section bg-primary text-white py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h1 class="display-4 fw-bold mb-4">Your Complete Fitness & Wellness Platform</h1>
-        <p class="lead mb-5">Connect with trainers, discover facilities, join events, and shop for fitness gear all in one place.</p>
-        <div class="d-flex gap-3">
-          <a href="{{ route('register') }}" class="btn btn-light btn-lg">
-            <i class="fas fa-user-plus me-2"></i>Get Started
+<div data-bs-spy="scroll" class="scrollspy-example">
+  <!-- Hero: Start -->
+  <section id="hero-animation">
+    <div id="landingHero" class="section-py landing-hero position-relative">
+      <img src="{{ asset('assets/img/front-pages/backgrounds/hero-bg.png') }}" alt="hero background"
+        class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-100 h-100" data-speed="1" />
+      <div class="container">
+        <div class="hero-text-box text-center position-relative">
+          <h1 class="text-primary hero-title display-6 fw-extrabold">Your Complete Fitness & Wellness Platform</h1>
+          <h2 class="hero-sub-title h6 mb-6">
+            Connect with trainers, discover facilities, join events, and shop for fitness gear<br class="d-none d-lg-block" />
+            all in one place.
+          </h2>
+          <div class="landing-hero-btn d-inline-block position-relative">
+            <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium">Join community <img
+                src="{{ asset('assets/img/front-pages/icons/Join-community-arrow.png') }}" alt="Join community arrow"
+                class="scaleX-n1-rtl" /></span>
+            <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Get Started</a>
+          </div>
+        </div>
+        <div id="heroDashboardAnimation" class="hero-animation-img">
+          <a href="{{ route('dashboard') }}" target="_blank">
+            <div id="heroAnimationImg" class="position-relative hero-dashboard-img">
+              <img
+                src="{{ asset('assets/img/front-pages/landing-page/hero-dashboard-' . $configData['theme'] . '.png') }}"
+                alt="hero dashboard" class="animation-img"
+                data-app-light-img="front-pages/landing-page/hero-dashboard-light.png"
+                data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png" />
+              <img
+                src="{{ asset('assets/img/front-pages/landing-page/hero-elements-' . $configData['theme'] . '.png') }}"
+                alt="hero elements" class="position-absolute hero-elements-img animation-img top-0 start-0"
+                data-app-light-img="front-pages/landing-page/hero-elements-light.png"
+                data-app-dark-img="front-pages/landing-page/hero-elements-dark.png" />
+            </div>
           </a>
-          <a href="#features" class="btn btn-outline-light btn-lg">
-            <i class="fas fa-info-circle me-2"></i>Learn More
-          </a>
         </div>
       </div>
-      <div class="col-lg-6 text-center">
-        <img src="{{ asset('assets/img/front-pages/backgrounds/hero-bg.png') }}" alt="VibeCore Hero" class="img-fluid">
-      </div>
     </div>
-  </div>
-</section>
+    <div class="landing-hero-blank"></div>
+  </section>
+  <!-- Hero: End -->
 
-<!-- Features Section -->
-<section id="features" class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">What VibeCore Offers</h2>
-      <p class="text-muted">Everything you need for your fitness journey in one platform</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="avatar avatar-lg bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
-              <i class="fas fa-dumbbell text-white fa-2x"></i>
-            </div>
-            <h5 class="card-title">Find Facilities</h5>
-            <p class="card-text text-muted">Discover gyms, swimming pools, boxing clubs, yoga studios, and more in your area.</p>
-          </div>
-        </div>
+  <!-- Useful features: Start -->
+  <section id="landingFeatures" class="section-py landing-features">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge bg-label-primary">Platform Features</span>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="avatar avatar-lg bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
-              <i class="fas fa-user-tie text-white fa-2x"></i>
-            </div>
-            <h5 class="card-title">Connect with Trainers</h5>
-            <p class="card-text text-muted">Book sessions with certified trainers specializing in fitness, swimming, boxing, dance, and more.</p>
+      <h4 class="text-center mb-1">
+        <span class="position-relative fw-extrabold z-1">Everything you need
+          <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
+            class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
+        </span>
+        for your fitness journey
+      </h4>
+      <p class="text-center mb-12">A comprehensive platform that connects fitness enthusiasts with trainers, facilities, and products.
+      </p>
+      <div class="features-icon-wrapper row gx-0 gy-6 g-sm-12">
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="mb-4 text-primary text-center">
+            <i class="fas fa-dumbbell fa-3x"></i>
           </div>
+          <h5 class="mb-2">Find Facilities</h5>
+          <p class="features-icon-description">Discover gyms, swimming pools, boxing clubs, yoga studios, and more in your area.</p>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="avatar avatar-lg bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
-              <i class="fas fa-calendar-alt text-white fa-2x"></i>
-            </div>
-            <h5 class="card-title">Join Events</h5>
-            <p class="card-text text-muted">Participate in bootcamps, workshops, competitions, and wellness retreats.</p>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="mb-4 text-primary text-center">
+            <i class="fas fa-user-tie fa-3x"></i>
           </div>
+          <h5 class="mb-2">Connect with Trainers</h5>
+          <p class="features-icon-description">Book sessions with certified trainers specializing in fitness, swimming, boxing, dance, and more.</p>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="avatar avatar-lg bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
-              <i class="fas fa-shopping-cart text-white fa-2x"></i>
-            </div>
-            <h5 class="card-title">Shop Fitness Gear</h5>
-            <p class="card-text text-muted">Browse and purchase equipment, supplements, apparel, and fitness accessories.</p>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="text-center mb-4 text-primary">
+            <i class="fas fa-calendar-alt fa-3x"></i>
           </div>
+          <h5 class="mb-2">Join Events</h5>
+          <p class="features-icon-description">Participate in bootcamps, workshops, competitions, and wellness retreats.</p>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="avatar avatar-lg bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
-              <i class="fas fa-users text-white fa-2x"></i>
-            </div>
-            <h5 class="card-title">Community</h5>
-            <p class="card-text text-muted">Connect with like-minded fitness enthusiasts and share your journey.</p>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="text-center mb-4 text-primary">
+            <i class="fas fa-shopping-cart fa-3x"></i>
           </div>
+          <h5 class="mb-2">Shop Fitness Gear</h5>
+          <p class="features-icon-description">Browse and purchase equipment, supplements, apparel, and fitness accessories.</p>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="avatar avatar-lg bg-secondary rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
-              <i class="fas fa-mobile-alt text-white fa-2x"></i>
-            </div>
-            <h5 class="card-title">Mobile Ready</h5>
-            <p class="card-text text-muted">Access VibeCore on any device with our responsive platform.</p>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="text-center mb-4 text-primary">
+            <i class="fas fa-users fa-3x"></i>
           </div>
+          <h5 class="mb-2">Community</h5>
+          <p class="features-icon-description">Connect with like-minded fitness enthusiasts and share your journey.</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="text-center mb-4 text-primary">
+            <i class="fas fa-mobile-alt fa-3x"></i>
+          </div>
+          <h5 class="mb-2">Mobile Ready</h5>
+          <p class="features-icon-description">Access VibeCore on any device with our responsive platform.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- Useful features: End -->
 
-<!-- Stats Section -->
-<section class="bg-light py-5">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-3">
-        <div class="mb-3">
-          <h3 class="fw-bold text-primary">50+</h3>
-          <p class="text-muted mb-0">Facilities</p>
+  <!-- Stats Section -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="mb-3">
+            <h3 class="fw-bold text-primary">50+</h3>
+            <p class="text-muted mb-0">Facilities</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="mb-3">
-          <h3 class="fw-bold text-success">100+</h3>
-          <p class="text-muted mb-0">Trainers</p>
+        <div class="col-md-3">
+          <div class="mb-3">
+            <h3 class="fw-bold text-success">100+</h3>
+            <p class="text-muted mb-0">Trainers</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="mb-3">
-          <h3 class="fw-bold text-warning">500+</h3>
-          <p class="text-muted mb-0">Products</p>
+        <div class="col-md-3">
+          <div class="mb-3">
+            <h3 class="fw-bold text-warning">500+</h3>
+            <p class="text-muted mb-0">Products</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="mb-3">
-          <h3 class="fw-bold text-info">1000+</h3>
-          <p class="text-muted mb-0">Users</p>
+        <div class="col-md-3">
+          <div class="mb-3">
+            <h3 class="fw-bold text-info">1000+</h3>
+            <p class="text-muted mb-0">Users</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA Section -->
-<section class="bg-primary text-white py-5">
-  <div class="container text-center">
-    <h3 class="mb-4">Ready to Start Your Fitness Journey?</h3>
-    <p class="lead mb-4">Join thousands of users who have transformed their lives with VibeCore.</p>
-    <a href="{{ route('register') }}" class="btn btn-light btn-lg">
-      <i class="fas fa-rocket me-2"></i>Join Now
-    </a>
-  </div>
-</section>
+  <!-- CTA Section -->
+  <section class="bg-primary text-white py-5">
+    <div class="container text-center">
+      <h3 class="mb-4">Ready to Start Your Fitness Journey?</h3>
+      <p class="lead mb-4">Join thousands of users who have transformed their lives with VibeCore.</p>
+      <a href="{{ route('register') }}" class="btn btn-light btn-lg">
+        <i class="fas fa-rocket me-2"></i>Join Now
+      </a>
+    </div>
+  </section>
+</div>
 @endsection 
