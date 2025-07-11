@@ -22,7 +22,7 @@ $activeClass = in_array($currentRouteName, $activeRoutes) ? 'active' : '';
           <i class="icon-base ti tabler-menu-2 icon-lg align-middle text-heading fw-medium"></i>
         </button>
         <!-- Mobile menu toggle: End-->
-        <a href="{{ url('front-pages/landing') }}" class="app-brand-link">
+        <a href="{{ url('/') }}" class="app-brand-link">
           <span class="app-brand-logo demo">@include('_partials.macros')</span>
         </a>
       </div>
