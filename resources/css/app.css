@@ -1,5 +1,5 @@
 /* Logo theme switching */
-.logo-dark { display: none; }
-.logo-light { display: inline; }
-[data-bs-theme="dark"] .logo-dark { display: inline; }
-[data-bs-theme="dark"] .logo-light { display: none; }
+.logo-dark { display: none !important; }
+.logo-light { display: inline !important; }
+[data-bs-theme="dark"] .logo-dark { display: inline !important; }
+[data-bs-theme="dark"] .logo-light { display: none !important; }
