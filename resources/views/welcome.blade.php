@@ -3,19 +3,19 @@
 @section('title', 'VibeCore - Your Complete Fitness & Wellness Platform')
 
 @section('vendor-style')
-@vite(['resources/assets/vendor/libs/aos/aos.scss'])
+@vite(['resources/assets/vendor/libs/animate-on-scroll/animate-on-scroll.scss'])
 @endsection
 
 @section('page-style')
-@vite(['resources/assets/vendor/scss/pages/front-pages.scss'])
+@vite(['resources/assets/vendor/scss/pages/front-page-landing.scss'])
 @endsection
 
 @section('vendor-script')
-@vite(['resources/assets/vendor/libs/aos/aos.js'])
+@vite(['resources/assets/vendor/libs/animate-on-scroll/animate-on-scroll.js'])
 @endsection
 
 @section('page-script')
-@vite(['resources/assets/js/front-pages-landing.js'])
+@vite(['resources/assets/js/front-page-landing.js'])
 @endsection
 
 @section('content')
