@@ -24,7 +24,6 @@ $activeClass = in_array($currentRouteName, $activeRoutes) ? 'active' : '';
         <!-- Mobile menu toggle: End-->
         <a href="{{ url('front-pages/landing') }}" class="app-brand-link">
           <span class="app-brand-logo demo">@include('_partials.macros')</span>
-          <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">{{ config('variables.templateName') }}</span>
         </a>
       </div>
       <!-- Menu logo wrapper: End -->
