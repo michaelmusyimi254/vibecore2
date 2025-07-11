@@ -83,9 +83,7 @@
           document.write(new Date().getFullYear());
           </script>
         </span>
-        <a href="{{ config('variables.creatorUrl') }}" target="_blank"
-          class="fw-medium text-white">{{ config('variables.creatorName') }},</a>
-        <span class="footer-bottom-text"> Made with ❤️ for a better web.</span>
+        <span class="footer-bottom-text"> Made by Brandsmith.</span>
       </div>
       <div>
         <a href="{{ config('variables.githubFreeUrl') }}" class="me-1 text-white" target="_blank">

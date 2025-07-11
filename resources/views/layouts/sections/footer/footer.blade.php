@@ -14,7 +14,7 @@ isset($configData['contentLayout']) && $configData['contentLayout'] === 'compact
                 <script>
                 document.write(new Date().getFullYear());
                 </script>
-                , made with ❤️ by <a href="{{ !empty(config('variables.creatorUrl')) ? config('variables.creatorUrl') : '' }}" target="_blank" class="footer-link">{{ !empty(config('variables.creatorName')) ? config('variables.creatorName') : '' }}</a>
+                , Made by Brandsmith
             </div>
             <div class="d-none d-lg-inline-block">
                 <a href="{{ config('variables.licenseUrl') ? config('variables.licenseUrl') : '#' }}" class="footer-link me-4" target="_blank">License</a>
