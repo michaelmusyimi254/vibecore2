@@ -1,6 +1,83 @@
 {
+  "_index-eQWVPmsa.js": {
+    "file": "assets/index-eQWVPmsa.js",
+    "name": "index"
+  },
+  "resources/assets/js/front-page-landing.js": {
+    "file": "assets/front-page-landing-BgdtDL36.js",
+    "name": "front-page-landing",
+    "src": "resources/assets/js/front-page-landing.js",
+    "isEntry": true
+  },
+  "resources/assets/js/pages-auth.js": {
+    "file": "assets/pages-auth-D0KVgRoL.js",
+    "name": "pages-auth",
+    "src": "resources/assets/js/pages-auth.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/@form-validation/auto-focus.js": {
+    "file": "assets/auto-focus-gx3LVEfk.js",
+    "name": "auto-focus",
+    "src": "resources/assets/vendor/libs/@form-validation/auto-focus.js",
+    "isEntry": true,
+    "imports": [
+      "_index-eQWVPmsa.js"
+    ]
+  },
+  "resources/assets/vendor/libs/@form-validation/bootstrap5.js": {
+    "file": "assets/bootstrap5-B8xweYSi.js",
+    "name": "bootstrap5",
+    "src": "resources/assets/vendor/libs/@form-validation/bootstrap5.js",
+    "isEntry": true,
+    "imports": [
+      "_index-eQWVPmsa.js"
+    ]
+  },
+  "resources/assets/vendor/libs/@form-validation/form-validation.scss": {
+    "file": "assets/form-validation-LGZ8W9wj.css",
+    "src": "resources/assets/vendor/libs/@form-validation/form-validation.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/@form-validation/popular.js": {
+    "file": "assets/popular-7izu1wde.js",
+    "name": "popular",
+    "src": "resources/assets/vendor/libs/@form-validation/popular.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/nouislider/nouislider.js": {
+    "file": "assets/nouislider-DTetY_TT.js",
+    "name": "nouislider",
+    "src": "resources/assets/vendor/libs/nouislider/nouislider.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/nouislider/nouislider.scss": {
+    "file": "assets/nouislider-Drzsy2ay.css",
+    "src": "resources/assets/vendor/libs/nouislider/nouislider.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/swiper/swiper.js": {
+    "file": "assets/swiper-BkuLhYW5.js",
+    "name": "swiper",
+    "src": "resources/assets/vendor/libs/swiper/swiper.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/swiper/swiper.scss": {
+    "file": "assets/swiper-BTYVbvbR.css",
+    "src": "resources/assets/vendor/libs/swiper/swiper.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/scss/pages/front-page-landing.scss": {
+    "file": "assets/front-page-landing--VKm3k8q.css",
+    "src": "resources/assets/vendor/scss/pages/front-page-landing.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/scss/pages/page-auth.scss": {
+    "file": "assets/page-auth-Pg0XbvmT.css",
+    "src": "resources/assets/vendor/scss/pages/page-auth.scss",
+    "isEntry": true
+  },
   "resources/css/app.css": {
-    "file": "assets/app-Bs8RuZ_g.css",
+    "file": "assets/app-Q8u75LDz.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
