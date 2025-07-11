@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web(LocaleMiddleware::class);
+        $middleware->alias([
+            'redirect.based.on.role' => \App\Http\Middleware\RedirectBasedOnRole::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
