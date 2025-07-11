@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\laravel_example\UserManagement;
 use App\Http\Controllers\dashboard\Analytics;
 use App\Http\Controllers\dashboard\Crm;
@@ -163,8 +164,8 @@ use App\Http\Controllers\maps\Leaflet;
 // Main Page Route
 Route::get('/', function () {
     return view('content.front-pages.landing-page');
-});
-Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
+})->middleware('guest');
+Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics')->middleware('auth');
 Route::get('/dashboard/crm', [Crm::class, 'index'])->name('dashboard-crm');
 // locale
 Route::get('/lang/{locale}', [LanguageController::class, 'swap']);
