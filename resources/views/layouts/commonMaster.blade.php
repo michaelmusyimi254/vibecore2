@@ -71,6 +71,7 @@
   <!-- Include Styles -->
   <!-- $isFront is used to append the front layout styles only on the front layout otherwise the variable will be blank -->
   @include('layouts/sections/styles' . $isFront)
+  <link rel="stylesheet" href="{{ asset('build/assets/app-BUqFGpCy.css') }}">
 
   @if (
       $primaryColorCSS &&
