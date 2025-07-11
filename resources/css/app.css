@@ -1,0 +1,5 @@
+/* Logo theme switching */
+.logo-dark { display: none; }
+.logo-light { display: inline; }
+body.dark-layout .logo-dark { display: inline; }
+body.dark-layout .logo-light { display: none; }
