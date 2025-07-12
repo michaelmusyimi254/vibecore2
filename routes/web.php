@@ -6,6 +6,21 @@ use Illuminate\Support\Facades\Route;
 // Authentication Routes (Laravel Breeze)
 require __DIR__.'/auth.php';
 
+// Custom Authentication Routes
+Route::get('/auth/login-cover', [App\Http\Controllers\authentications\LoginCover::class, 'index'])->name('auth.login-cover');
+Route::get('/auth/login-basic', [App\Http\Controllers\authentications\LoginBasic::class, 'index'])->name('auth.login-basic');
+Route::get('/auth/register-cover', [App\Http\Controllers\authentications\RegisterCover::class, 'index'])->name('auth.register-cover');
+Route::get('/auth/register-basic', [App\Http\Controllers\authentications\RegisterBasic::class, 'index'])->name('auth.register-basic');
+Route::get('/auth/register-multisteps', [App\Http\Controllers\authentications\RegisterMultiSteps::class, 'index'])->name('auth.register-multisteps');
+Route::get('/auth/forgot-password-cover', [App\Http\Controllers\authentications\ForgotPasswordCover::class, 'index'])->name('auth.forgot-password-cover');
+Route::get('/auth/forgot-password-basic', [App\Http\Controllers\authentications\ForgotPasswordBasic::class, 'index'])->name('auth.forgot-password-basic');
+Route::get('/auth/reset-password-cover', [App\Http\Controllers\authentications\ResetPasswordCover::class, 'index'])->name('auth.reset-password-cover');
+Route::get('/auth/reset-password-basic', [App\Http\Controllers\authentications\ResetPasswordBasic::class, 'index'])->name('auth.reset-password-basic');
+Route::get('/auth/two-steps-cover', [App\Http\Controllers\authentications\TwoStepsCover::class, 'index'])->name('auth.two-steps-cover');
+Route::get('/auth/two-steps-basic', [App\Http\Controllers\authentications\TwoStepsBasic::class, 'index'])->name('auth.two-steps-basic');
+Route::get('/auth/verify-email-cover', [App\Http\Controllers\authentications\VerifyEmailCover::class, 'index'])->name('auth.verify-email-cover');
+Route::get('/auth/verify-email-basic', [App\Http\Controllers\authentications\VerifyEmailBasic::class, 'index'])->name('auth.verify-email-basic');
+
 // Dashboard Routes for Different Roles
 Route::middleware(['auth'])->group(function () {
     // General Dashboard Route (redirects based on role)
