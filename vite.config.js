@@ -37,7 +37,8 @@ export default defineConfig({
                 'resources/assets/vendor/js/helpers.js',
                 'resources/assets/vendor/js/template-customizer.js',
                 'resources/assets/vendor/libs/apex-charts/apexcharts.js',
-                'resources/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js'
+                'resources/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js',
+                'resources/assets/js/front-config.js'
             ],
             refresh: true,
         }),
