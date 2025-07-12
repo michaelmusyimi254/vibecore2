@@ -34,23 +34,18 @@ $configData = Helper::appClasses();
       <img src="{{ asset('assets/img/front-pages/backgrounds/hero-bg.png') }}" alt="hero background"
         class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-100 h-100" data-speed="1" />
       <div class="container">
-        <div class="hero-text-box text-center position-relative">
+        <div class="hero-text-box text-start position-relative">
           <h1 class="hero-title display-6 fw-extrabold text-white">Your Complete Fitness & Wellness Platform</h1>
           <h2 class="hero-sub-title h6 mb-6 text-white">
             Connect with trainers, discover facilities, join events, and shop for fitness gear<br class="d-none d-lg-block" />
             all in one place.
           </h2>
-          
           <!-- Smart Search Component -->
           <div class="hero-search-section mb-6">
             @include('components.smart-search')
           </div>
-          
-          <div class="landing-hero-btn d-inline-block position-relative">
-            <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium text-white">Join community <img
-                src="{{ asset('assets/img/front-pages/icons/Join-community-arrow.png') }}" alt="Join community arrow"
-                class="scaleX-n1-rtl" /></span>
-            <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Get Started</a>
+          <div class="landing-hero-btn d-block d-md-none position-relative mt-3">
+            <a href="{{ route('register') }}" class="btn btn-primary btn-lg w-100">Get Started</a>
           </div>
         </div>
         <div id="heroDashboardAnimation" class="hero-animation-img">
