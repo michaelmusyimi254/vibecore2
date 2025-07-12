@@ -7,7 +7,7 @@ $configData = Helper::appClasses();
 
 @section('title', 'Register Cover - Pages')
 
-@section('vendor-style')
+@section('vendor- costyle')
 @vite(['resources/assets/vendor/libs/@form-validation/form-validation.scss'])
 @endsection
 
