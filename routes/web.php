@@ -152,3 +152,6 @@ Route::get('/shop', function () {
 Route::get('/events', function () {
     return view('content.apps.app-calendar');
 })->name('events');
+
+// Search Routes
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'results'])->name('search.results');

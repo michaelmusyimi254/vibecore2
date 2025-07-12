@@ -40,6 +40,12 @@ $configData = Helper::appClasses();
             Connect with trainers, discover facilities, join events, and shop for fitness gear<br class="d-none d-lg-block" />
             all in one place.
           </h2>
+          
+          <!-- Smart Search Component -->
+          <div class="hero-search-section mb-6">
+            @include('components.smart-search')
+          </div>
+          
           <div class="landing-hero-btn d-inline-block position-relative">
             <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium">Join community <img
                 src="{{ asset('assets/img/front-pages/icons/Join-community-arrow.png') }}" alt="Join community arrow"
