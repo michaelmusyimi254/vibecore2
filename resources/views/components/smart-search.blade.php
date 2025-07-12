@@ -45,28 +45,28 @@ $configData = Helper::appClasses();
 
 .glassy-bar {
   background: rgba(255,255,255,0.13);
-  backdrop-filter: blur(16px);
-  border-radius: 2.5rem;
-  padding: 0.9rem 2.2rem;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.13);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  padding: 0.4rem 1.1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.13);
 }
 .smart-search-form {
   width: 100%;
-  gap: 1.1rem;
+  gap: 0.5rem;
 }
 .search-input {
   background: rgba(255,255,255,0.18) !important;
   border: none !important;
-  border-radius: 2rem !important;
-  padding: 0.9rem 1.5rem !important;
-  font-size: 1.15rem !important;
+  border-radius: 1.3rem !important;
+  padding: 0.45rem 1rem !important;
+  font-size: 1rem !important;
   color: #fff !important;
-  min-width: 180px;
-  height: 2.8rem !important;
+  min-width: 120px;
+  height: 2.1rem !important;
   box-shadow: none !important;
   transition: all 0.2s;
 }
@@ -78,11 +78,11 @@ $configData = Helper::appClasses();
   background: #fff !important;
   color: #222 !important;
   border: none !important;
-  border-radius: 2rem !important;
-  padding: 0.9rem 2.2rem !important;
+  border-radius: 1.3rem !important;
+  padding: 0.45rem 1.5rem !important;
   font-weight: 700;
-  font-size: 1.1rem;
-  height: 2.8rem !important;
+  font-size: 1rem;
+  height: 2.1rem !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   transition: all 0.2s;
   letter-spacing: 0.01em;
@@ -94,27 +94,27 @@ $configData = Helper::appClasses();
 }
 .popular-searches {
   text-align: center;
-  margin-top: 1.1rem;
+  margin-top: 0.7rem;
 }
 .popular-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.1rem;
+  gap: 0.6rem;
   justify-content: center;
 }
 .popular-tag {
   display: inline-block;
   background: rgba(255,255,255,0.18);
   color: #fff;
-  padding: 0.6rem 2.1rem;
-  border-radius: 2rem;
-  font-size: 1.08rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: 1.3rem;
+  font-size: 0.98rem;
   font-weight: 500;
   text-decoration: none;
-  border: 1.5px solid rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.13);
   transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
 }
 .popular-tag:hover {
   background: rgba(255,255,255,0.32);
@@ -124,13 +124,13 @@ $configData = Helper::appClasses();
 }
 @media (max-width: 900px) {
   .smart-search-container { max-width: 100%; }
-  .glassy-bar { padding: 0.6rem 0.7rem; }
-  .search-input, .search-btn { font-size: 1rem !important; height: 2.2rem !important; padding: 0.5rem 1rem !important; }
-  .popular-tag { font-size: 0.98rem; padding: 0.5rem 1.2rem; }
+  .glassy-bar { padding: 0.3rem 0.5rem; }
+  .search-input, .search-btn { font-size: 0.95rem !important; height: 1.7rem !important; padding: 0.3rem 0.7rem !important; }
+  .popular-tag { font-size: 0.92rem; padding: 0.3rem 0.7rem; }
 }
 @media (max-width: 600px) {
-  .smart-search-form { flex-direction: column; gap: 0.5rem; }
-  .glassy-bar { border-radius: 1.2rem; }
+  .smart-search-form { flex-direction: column; gap: 0.4rem; }
+  .glassy-bar { border-radius: 0.8rem; }
   .search-input, .search-btn { width: 100%; min-width: 0; }
   .popular-tag { width: 100%; min-width: 0; text-align: center; }
 }
