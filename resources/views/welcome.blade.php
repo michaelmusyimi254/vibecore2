@@ -30,13 +30,13 @@ $configData = Helper::appClasses();
 <div data-bs-spy="scroll" class="scrollspy-example">
   <!-- Hero: Start -->
   <section id="hero-animation">
-    <div id="landingHero" class="section-py landing-hero position-relative">
+    <div id="landingHero" class="section-py landing-hero position-relative bg-white">
       <img src="{{ asset('assets/img/front-pages/backgrounds/hero-bg.png') }}" alt="hero background"
         class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-100 h-100" data-speed="1" />
       <div class="container">
         <div class="hero-text-box text-start position-relative">
-          <h1 class="hero-title display-6 fw-extrabold text-white">Your Complete Fitness & Wellness Platform</h1>
-          <h2 class="hero-sub-title h6 mb-6 text-white">
+          <h1 class="hero-title display-6 fw-extrabold text-dark">Your Complete Fitness & Wellness Platform</h1>
+          <h2 class="hero-sub-title h6 mb-6 text-dark">
             Connect with trainers, discover facilities, join events, and shop for fitness gear<br class="d-none d-lg-block" />
             all in one place.
           </h2>
