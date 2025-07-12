@@ -2220,6 +2220,12 @@
     "src": "resources/assets/vendor/fonts/iconify/iconify.css",
     "isEntry": true
   },
+  "resources/assets/vendor/js/bootstrap.js": {
+    "file": "assets/bootstrap-DJKADUhV.js",
+    "name": "bootstrap",
+    "src": "resources/assets/vendor/js/bootstrap.js",
+    "isEntry": true
+  },
   "resources/assets/vendor/js/dropdown-hover.js": {
     "file": "assets/dropdown-hover-D5gy_vov.js",
     "name": "dropdown-hover",
@@ -2332,6 +2338,15 @@
     "file": "assets/pickr-themes-C9a2eCBH.css",
     "src": "resources/assets/vendor/libs/pickr/pickr-themes.scss",
     "isEntry": true
+  },
+  "resources/assets/vendor/libs/popper/popper.js": {
+    "file": "assets/popper-C1H6IGLQ.js",
+    "name": "popper",
+    "src": "resources/assets/vendor/libs/popper/popper.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
   },
   "resources/assets/vendor/libs/swiper/swiper.js": {
     "file": "assets/swiper-BkuLhYW5.js",
