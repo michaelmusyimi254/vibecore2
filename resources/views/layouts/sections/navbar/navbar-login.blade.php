@@ -34,25 +34,25 @@ $currentRouteName = Route::currentRouteName();
         </button>
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <span class="nav-link fw-medium">Home</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">Home</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link fw-medium">Features</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">Features</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link fw-medium">Team</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">Team</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link fw-medium">FAQ</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">FAQ</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link fw-medium">Contact us</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">Contact us</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link fw-medium">Pages</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">Pages</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link fw-medium">Admin</span>
+            <a href="{{ url('/') }}" class="nav-link fw-medium">Admin</a>
           </li>
         </ul>
       </div>
@@ -94,10 +94,17 @@ $currentRouteName = Route::currentRouteName();
         @endif
 
         <!-- navbar button: Start -->
-        <li>
-          <span class="btn btn-primary"><span
-              class="icon-base ti tabler-login scaleX-n1-rtl me-md-1"></span><span
-              class="d-none d-md-block">Login/Register</span></span>
+        <li class="nav-item dropdown me-2">
+          <a class="btn btn-primary dropdown-toggle" href="javascript:void(0);" data-bs-toggle="dropdown">
+            <span class="icon-base ti tabler-login scaleX-n1-rtl me-md-1"></span>
+            <span class="d-none d-md-block">Login/Register</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="{{ url('auth/login-cover') }}">Login</a></li>
+            <li><a class="dropdown-item" href="{{ url('auth/register-cover') }}">Register</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ url('auth/forgot-password-cover') }}">Forgot Password</a></li>
+          </ul>
         </li>
         <!-- navbar button: End -->
       </ul>
