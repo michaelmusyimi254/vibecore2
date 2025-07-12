@@ -271,3 +271,116 @@
     }
   }
 }
+
+// Custom hero/banner overrides for VibeCore wellness landing
+.custom-hero-banner {
+  min-height: 420px;
+  height: 420px;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.custom-hero-overlay {
+  background: rgba(0,0,0,0.45);
+  border-radius: 2.5rem;
+  z-index: 1;
+}
+.custom-hero-title {
+  color: #fff !important;
+  font-size: 2.8rem !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.custom-hero-subtitle {
+  color: #fff !important;
+  font-size: 1.35rem !important;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.smart-search-container {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+.search-form-wrapper {
+  background: rgba(255,255,255,0.10) !important;
+  border-radius: 2.5rem !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.13);
+  border: 1.5px solid rgba(255,255,255,0.22) !important;
+  padding: 0.5rem 1.5rem !important;
+}
+.smart-search-form {
+  gap: 0.5rem;
+}
+.search-input, .search-filter {
+  background: rgba(255,255,255,0.18) !important;
+  color: #fff !important;
+  border: 1.5px solid #fff !important;
+  border-radius: 2rem !important;
+  padding: 0.7rem 1.2rem !important;
+  font-size: 1.08rem !important;
+  min-width: 180px;
+  height: 2.7rem !important;
+  box-shadow: none !important;
+  transition: all 0.2s;
+}
+.search-input::placeholder {
+  color: #fff !important;
+  opacity: 0.85;
+}
+.search-btn {
+  background: #fff !important;
+  color: #222 !important;
+  border: none !important;
+  border-radius: 2rem !important;
+  padding: 0.7rem 2.1rem !important;
+  font-weight: 700;
+  font-size: 1.08rem;
+  height: 2.7rem !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+.search-btn:hover {
+  background: #f2f2f2 !important;
+  color: #007bff !important;
+  transform: translateY(-1px) scale(1.03);
+}
+.popular-tags-heading {
+  color: #fff !important;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.03em;
+}
+.popular-tag {
+  background: rgba(255,255,255,0.22) !important;
+  color: #fff !important;
+  border: 1.5px solid #fff !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.popular-tag:hover {
+  background: rgba(255,255,255,0.32) !important;
+  color: #fff !important;
+  text-decoration: none;
+  transform: translateY(-1px) scale(1.04);
+}
+@media (max-width: 900px) {
+  .custom-hero-banner { min-height: 320px; height: 320px; border-radius: 1.5rem; }
+  .custom-hero-title { font-size: 2rem !important; }
+  .custom-hero-subtitle { font-size: 1.05rem !important; }
+  .search-form-wrapper { padding: 0.3rem 0.5rem !important; }
+}
+@media (max-width: 600px) {
+  .custom-hero-banner { min-height: 220px; height: 220px; border-radius: 1rem; }
+  .custom-hero-title { font-size: 1.2rem !important; }
+  .custom-hero-subtitle { font-size: 0.92rem !important; }
+  .search-form-wrapper { border-radius: 1rem !important; }
+  .search-input, .search-filter, .search-btn { width: 100%; min-width: 0; }
+}
