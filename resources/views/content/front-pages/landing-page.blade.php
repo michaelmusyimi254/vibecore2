@@ -37,7 +37,7 @@ $configData = Helper::appClasses();
       <div class="custom-hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,0.45); border-radius:2.5rem; z-index:1;"></div>
       <div class="container position-relative" style="z-index:2;">
         <div class="hero-text-box text-center position-relative py-5">
-          <h1 class="custom-hero-title fw-bold mb-3" style="color:#fff; font-size:2.8rem; letter-spacing:-0.02em;">Enrich Your Wellness Journey</h1>
+          <h1 class="custom-hero-title fw-bold mb-3" style="color:#fff !important; font-size:2.8rem; letter-spacing:-0.02em;">Enrich Your Wellness Journey</h1>
           <h2 class="custom-hero-subtitle mb-4" style="color:#fff; font-size:1.35rem; font-weight:400;">
             Connect with trainers, discover facilities, join events,<br class="d-none d-md-block" />
             and shop for fitness gear all in one place.
