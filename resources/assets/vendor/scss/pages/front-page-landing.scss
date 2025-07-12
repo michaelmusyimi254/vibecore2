@@ -274,9 +274,9 @@
 
 // Custom hero/banner overrides for VibeCore wellness landing
 .custom-hero-banner {
-  min-height: 420px;
-  height: 420px;
-  border-radius: 2.5rem;
+  min-height: 260px;
+  height: 260px;
+  border-radius: 3.5rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -286,7 +286,7 @@
 }
 .custom-hero-overlay {
   background: rgba(0,0,0,0.45);
-  border-radius: 2.5rem;
+  border-radius: 3.5rem;
   z-index: 1;
 }
 .custom-hero-title {
@@ -372,13 +372,13 @@
   transform: translateY(-1px) scale(1.04);
 }
 @media (max-width: 900px) {
-  .custom-hero-banner { min-height: 320px; height: 320px; border-radius: 1.5rem; }
+  .custom-hero-banner { min-height: 180px; height: 180px; border-radius: 2rem; }
   .custom-hero-title { font-size: 2rem !important; }
   .custom-hero-subtitle { font-size: 1.05rem !important; }
   .search-form-wrapper { padding: 0.3rem 0.5rem !important; }
 }
 @media (max-width: 600px) {
-  .custom-hero-banner { min-height: 220px; height: 220px; border-radius: 1rem; }
+  .custom-hero-banner { min-height: 120px; height: 120px; border-radius: 1.2rem; }
   .custom-hero-title { font-size: 1.2rem !important; }
   .custom-hero-subtitle { font-size: 0.92rem !important; }
   .search-form-wrapper { border-radius: 1rem !important; }
