@@ -74,17 +74,20 @@ $configData = Helper::appClasses();
 
 <style>
 .smart-search-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 .search-form-wrapper {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  margin-top: 2rem;
 }
 
 [data-bs-theme="dark"] .search-form-wrapper {
@@ -103,20 +106,21 @@ $configData = Helper::appClasses();
 }
 
 .search-input {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: none;
-  border-radius: 15px;
-  padding: 1rem 1rem 1rem 3rem;
-  font-size: 1.1rem;
-  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+  font-size: 1.2rem;
+  backdrop-filter: blur(10px);
   color: #333;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 [data-bs-theme="dark"] .search-input {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-input:focus {
@@ -132,15 +136,16 @@ $configData = Helper::appClasses();
 
 .search-icon {
   position: absolute;
-  left: 1rem;
+  left: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #666;
-  font-size: 1.2rem;
+  color: #007bff;
+  font-size: 1.4rem;
+  z-index: 2;
 }
 
 [data-bs-theme="dark"] .search-icon {
-  color: #aaa;
+  color: #fff;
 }
 
 .search-filters {
@@ -150,19 +155,21 @@ $configData = Helper::appClasses();
 }
 
 .search-filter {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   border: none;
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 1rem 1.25rem;
+  backdrop-filter: blur(10px);
   color: #333;
   transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 [data-bs-theme="dark"] .search-filter {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-filter:focus {
@@ -178,30 +185,36 @@ $configData = Helper::appClasses();
 .search-btn {
   background: linear-gradient(135deg, #007bff, #0056b3);
   border: none;
-  border-radius: 10px;
-  padding: 0.75rem 2rem;
+  border-radius: 15px;
+  padding: 1rem 2.5rem;
   font-weight: 600;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
 .search-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+  background: linear-gradient(135deg, #0056b3, #004085);
 }
 
 .popular-searches {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .popular-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 [data-bs-theme="dark"] .popular-label {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .popular-tags {
@@ -214,31 +227,35 @@ $configData = Helper::appClasses();
 .popular-tag {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.9);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.95);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 [data-bs-theme="dark"] .popular-tag {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .popular-tag:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   color: #fff;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 [data-bs-theme="dark"] .popular-tag:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .search-suggestions {
