@@ -26,20 +26,9 @@ $configData = Helper::appClasses();
 
   <!-- Popular Searches -->
   <div class="popular-searches mt-3">
-    <div class="popular-tags d-flex flex-wrap justify-content-center gap-2">
-      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'fitness']) }}" class="popular-tag">Fitness Trainers</a>
-      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'gym']) }}" class="popular-tag">Gyms</a>
-      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'yoga']) }}" class="popular-tag">Yoga Classes</a>
-      <a href="{{ route('search.results', ['category' => 'event', 'interest' => 'bootcamp']) }}" class="popular-tag">Bootcamps</a>
-      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'swimming']) }}" class="popular-tag">Swimming Pools</a>
-      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'boxing']) }}" class="popular-tag">Boxing Coaches</a>
-      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'golf park']) }}" class="popular-tag">Golf Parks</a>
-      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'golf']) }}" class="popular-tag">Golf Trainers</a>
-      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'boxing']) }}" class="popular-tag">Boxing Trainers</a>
-      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'tennis']) }}" class="popular-tag">Tennis Courts</a>
-      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'padel']) }}" class="popular-tag">Padel Courts</a>
-      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'floodlight']) }}" class="popular-tag">Floodlight Courts</a>
-      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'nutrition']) }}" class="popular-tag">Nutritionists</a>
+    <div class="popular-tags-heading mb-1 small text-muted text-center" style="font-weight: 600; letter-spacing: 0.03em;">Popular tags</div>
+    <div class="popular-tags d-flex flex-wrap justify-content-center gap-2" id="popularTagsContainer">
+      <!-- Dynamic tags will be injected here -->
     </div>
   </div>
 </div>
@@ -283,6 +272,44 @@ document.addEventListener('DOMContentLoaded', function() {
     return icons[category] || 'tabler-search';
   }
   
+  // --- Dynamic Popular Tags ---
+  function fetchPopularTags(region = null) {
+    let url = '/api/popular-tags';
+    if (region) {
+      url += '?region=' + encodeURIComponent(region);
+    }
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const tags = data.tags || [];
+        const container = document.getElementById('popularTagsContainer');
+        container.innerHTML = '';
+        tags.forEach(tag => {
+          const a = document.createElement('a');
+          a.href = `{{ route('search.results') }}?category=${encodeURIComponent(tag.category)}&interest=${encodeURIComponent(tag.interest)}`;
+          a.className = 'popular-tag';
+          a.textContent = tag.label;
+          container.appendChild(a);
+        });
+      });
+  }
+
+  // Try to get region from select input, cookie, or fallback
+  let region = null;
+  const locationSelect = document.querySelector('select[name="location"]');
+  if (locationSelect && locationSelect.value && locationSelect.value !== '') {
+    region = locationSelect.value;
+  }
+  // Optionally, add geolocation logic here if needed
+  fetchPopularTags(region);
+
+  // Optionally, re-fetch tags if location filter changes
+  if (locationSelect) {
+    locationSelect.addEventListener('change', function() {
+      fetchPopularTags(this.value);
+    });
+  }
+
   // Hide suggestions when clicking outside
   document.addEventListener('click', function(e) {
     if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
