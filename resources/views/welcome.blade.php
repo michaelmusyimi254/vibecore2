@@ -33,14 +33,13 @@ $configData = Helper::appClasses();
     <div id="landingHero" class="section-py landing-hero position-relative bg-white">
       <img src="{{ asset('assets/img/front-pages/backgrounds/hero-bg.png') }}" alt="hero background"
         class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-100 h-100" data-speed="1" />
-      <div class="container">
-        <div class="hero-text-box text-start position-relative">
-          <h1 class="hero-title display-6 fw-extrabold text-dark">Your Complete Fitness & Wellness Platform</h1>
-          <h2 class="hero-sub-title h6 mb-6 text-dark">
+      <div class="container position-relative h-100">
+        <div class="hero-content-left d-flex flex-column justify-content-center h-100" style="min-height: 60vh;">
+          <h1 class="hero-title display-6 fw-extrabold">Your Complete Fitness & Wellness Platform</h1>
+          <h2 class="hero-sub-title h6 mb-6">
             Connect with trainers, discover facilities, join events, and shop for fitness gear<br class="d-none d-lg-block" />
             all in one place.
           </h2>
-          <!-- Smart Search Component -->
           <div class="hero-search-section mb-6">
             @include('components.smart-search')
           </div>
@@ -177,3 +176,30 @@ $configData = Helper::appClasses();
   </section>
 </div>
 @endsection 
+
+<style>
+.hero-content-left {
+  max-width: 500px;
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 992px) {
+  .hero-content-left {
+    min-height: 70vh;
+    max-width: 40%;
+    padding-left: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 991.98px) {
+  .hero-content-left {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+</style> 

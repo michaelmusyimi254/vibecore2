@@ -33,6 +33,13 @@ $configData = Helper::appClasses();
       <a href="{{ route('search.results', ['category' => 'event', 'interest' => 'bootcamp']) }}" class="popular-tag">Bootcamps</a>
       <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'swimming']) }}" class="popular-tag">Swimming Pools</a>
       <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'boxing']) }}" class="popular-tag">Boxing Coaches</a>
+      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'golf park']) }}" class="popular-tag">Golf Parks</a>
+      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'golf']) }}" class="popular-tag">Golf Trainers</a>
+      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'boxing']) }}" class="popular-tag">Boxing Trainers</a>
+      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'tennis']) }}" class="popular-tag">Tennis Courts</a>
+      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'padel']) }}" class="popular-tag">Padel Courts</a>
+      <a href="{{ route('search.results', ['category' => 'facility', 'interest' => 'floodlight']) }}" class="popular-tag">Floodlight Courts</a>
+      <a href="{{ route('search.results', ['category' => 'trainer', 'interest' => 'nutrition']) }}" class="popular-tag">Nutritionists</a>
     </div>
   </div>
 </div>
