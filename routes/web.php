@@ -155,3 +155,6 @@ Route::get('/events', function () {
 
 // Search Routes
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'results'])->name('search.results');
+
+// Popular tags API for smart search bar
+Route::get('/api/popular-tags', [App\Http\Controllers\front_pages\Landing::class, 'getPopularTags'])->name('api.popular-tags');
