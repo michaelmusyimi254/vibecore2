@@ -18,7 +18,9 @@ export default defineConfig({
                 'resources/assets/js/pages-auth.js',
                 'resources/assets/vendor/libs/@form-validation/popular.js',
                 'resources/assets/vendor/libs/@form-validation/bootstrap5.js',
-                'resources/assets/vendor/libs/@form-validation/auto-focus.js'
+                'resources/assets/vendor/libs/@form-validation/auto-focus.js',
+                'resources/assets/vendor/js/dropdown-hover.js',
+                'resources/assets/vendor/js/mega-dropdown.js'
             ],
             refresh: true,
         }),

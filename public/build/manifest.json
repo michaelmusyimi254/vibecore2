@@ -15,6 +15,18 @@
     "src": "resources/assets/js/pages-auth.js",
     "isEntry": true
   },
+  "resources/assets/vendor/js/dropdown-hover.js": {
+    "file": "assets/dropdown-hover-D5gy_vov.js",
+    "name": "dropdown-hover",
+    "src": "resources/assets/vendor/js/dropdown-hover.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/js/mega-dropdown.js": {
+    "file": "assets/mega-dropdown-DsEs-otz.js",
+    "name": "mega-dropdown",
+    "src": "resources/assets/vendor/js/mega-dropdown.js",
+    "isEntry": true
+  },
   "resources/assets/vendor/libs/@form-validation/auto-focus.js": {
     "file": "assets/auto-focus-gx3LVEfk.js",
     "name": "auto-focus",

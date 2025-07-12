@@ -27,41 +27,41 @@ Route::middleware(['auth'])->group(function () {
     // Trainee Dashboard
     Route::prefix('trainee')->middleware(['role:trainee'])->group(function () {
         Route::get('/dashboard', function () {
-            return view('dashboards.trainee.dashboard');
+            return view('content.dashboard.dashboards-analytics');
         })->name('trainee.dashboard');
         Route::get('/bookings', function () {
-            return view('dashboards.trainee.bookings');
+            return view('content.apps.app-calendar');
         })->name('trainee.bookings');
         Route::get('/schedule', function () {
-            return view('dashboards.trainee.schedule');
+            return view('content.apps.app-calendar');
         })->name('trainee.schedule');
         Route::get('/profile', function () {
-            return view('dashboards.trainee.profile');
+            return view('content.pages.pages-profile-user');
         })->name('trainee.profile');
         Route::get('/messages', function () {
-            return view('dashboards.trainee.messages');
+            return view('content.apps.app-chat');
         })->name('trainee.messages');
         Route::get('/community', function () {
-            return view('dashboards.trainee.community');
+            return view('content.apps.app-chat');
         })->name('trainee.community');
     });
 
     // Trainer Dashboard
     Route::prefix('trainer')->middleware(['role:trainer'])->group(function () {
         Route::get('/dashboard', function () {
-            return view('dashboards.trainer.dashboard');
+            return view('content.dashboard.dashboards-crm');
         })->name('trainer.dashboard');
         Route::get('/schedule', function () {
-            return view('dashboards.trainer.schedule');
+            return view('content.apps.app-calendar');
         })->name('trainer.schedule');
         Route::get('/clients', function () {
-            return view('dashboards.trainer.clients');
+            return view('content.apps.app-user-list');
         })->name('trainer.clients');
         Route::get('/earnings', function () {
-            return view('dashboards.trainer.earnings');
+            return view('content.apps.app-ecommerce-dashboard');
         })->name('trainer.earnings');
         Route::get('/profile', function () {
-            return view('dashboards.trainer.profile');
+            return view('content.pages.pages-profile-user');
         })->name('trainer.profile');
     });
 
