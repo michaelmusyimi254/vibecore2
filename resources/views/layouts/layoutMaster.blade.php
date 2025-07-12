@@ -13,5 +13,7 @@
               ? 'layouts.blankLayout'
               : ($configData['layout'] === 'front'
                   ? 'layouts.layoutFront'
-                  : 'layouts.contentNavbarLayout')))
+                  : ($configData['layout'] === 'login'
+                      ? 'layouts.layoutLogin'
+                      : 'layouts.contentNavbarLayout'))))
 @endisset
