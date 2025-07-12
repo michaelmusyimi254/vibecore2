@@ -7,6 +7,11 @@
     "file": "assets/index-eQWVPmsa.js",
     "name": "index"
   },
+  "resources/assets/css/demo.css": {
+    "file": "assets/demo-C9zMtG-C.css",
+    "src": "resources/assets/css/demo.css",
+    "isEntry": true
+  },
   "resources/assets/js/dashboards-analytics.js": {
     "file": "assets/dashboards-analytics-B5eGrKbf.js",
     "name": "dashboards-analytics",
@@ -2204,10 +2209,21 @@
     "file": "assets/zw-BsTZ3ABm.svg",
     "src": "resources/assets/vendor/fonts/flags/4x3/zw.svg"
   },
+  "resources/assets/vendor/fonts/iconify/iconify.css": {
+    "file": "assets/iconify-CUuAgEs4.css",
+    "src": "resources/assets/vendor/fonts/iconify/iconify.css",
+    "isEntry": true
+  },
   "resources/assets/vendor/js/dropdown-hover.js": {
     "file": "assets/dropdown-hover-D5gy_vov.js",
     "name": "dropdown-hover",
     "src": "resources/assets/vendor/js/dropdown-hover.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/js/helpers.js": {
+    "file": "assets/helpers-DAoeyj3E.js",
+    "name": "helpers",
+    "src": "resources/assets/vendor/js/helpers.js",
     "isEntry": true
   },
   "resources/assets/vendor/js/mega-dropdown.js": {
@@ -2215,6 +2231,15 @@
     "name": "mega-dropdown",
     "src": "resources/assets/vendor/js/mega-dropdown.js",
     "isEntry": true
+  },
+  "resources/assets/vendor/js/template-customizer.js": {
+    "file": "assets/template-customizer-DLaa5T9Z.js",
+    "name": "template-customizer",
+    "src": "resources/assets/vendor/js/template-customizer.js",
+    "isEntry": true,
+    "css": [
+      "assets/template-customizer-Dlk0cFN9.css"
+    ]
   },
   "resources/assets/vendor/libs/@form-validation/auto-focus.js": {
     "file": "assets/auto-focus-gx3LVEfk.js",
@@ -2281,6 +2306,11 @@
     "src": "resources/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss",
     "isEntry": true
   },
+  "resources/assets/vendor/libs/node-waves/node-waves.scss": {
+    "file": "assets/node-waves--n8WzYZJ.css",
+    "src": "resources/assets/vendor/libs/node-waves/node-waves.scss",
+    "isEntry": true
+  },
   "resources/assets/vendor/libs/nouislider/nouislider.js": {
     "file": "assets/nouislider-DTetY_TT.js",
     "name": "nouislider",
@@ -2290,6 +2320,11 @@
   "resources/assets/vendor/libs/nouislider/nouislider.scss": {
     "file": "assets/nouislider-Drzsy2ay.css",
     "src": "resources/assets/vendor/libs/nouislider/nouislider.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/pickr/pickr-themes.scss": {
+    "file": "assets/pickr-themes-C9a2eCBH.css",
+    "src": "resources/assets/vendor/libs/pickr/pickr-themes.scss",
     "isEntry": true
   },
   "resources/assets/vendor/libs/swiper/swiper.js": {
@@ -2303,6 +2338,11 @@
     "src": "resources/assets/vendor/libs/swiper/swiper.scss",
     "isEntry": true
   },
+  "resources/assets/vendor/scss/core.scss": {
+    "file": "assets/core-CdVZuQ8c.css",
+    "src": "resources/assets/vendor/scss/core.scss",
+    "isEntry": true
+  },
   "resources/assets/vendor/scss/pages/cards-advance.scss": {
     "file": "assets/cards-advance-DVUf08fn.css",
     "src": "resources/assets/vendor/scss/pages/cards-advance.scss",
@@ -2313,13 +2353,18 @@
     "src": "resources/assets/vendor/scss/pages/front-page-landing.scss",
     "isEntry": true
   },
+  "resources/assets/vendor/scss/pages/front-page.scss": {
+    "file": "assets/front-page-r2zW1A8V.css",
+    "src": "resources/assets/vendor/scss/pages/front-page.scss",
+    "isEntry": true
+  },
   "resources/assets/vendor/scss/pages/page-auth.scss": {
     "file": "assets/page-auth-Pg0XbvmT.css",
     "src": "resources/assets/vendor/scss/pages/page-auth.scss",
     "isEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-Q8u75LDz.css",
+    "file": "assets/app-BTOBU1EI.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
