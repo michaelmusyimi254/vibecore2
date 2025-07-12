@@ -7,6 +7,10 @@
     "file": "assets/index-eQWVPmsa.js",
     "name": "index"
   },
+  "_jquery-BQXThELV.js": {
+    "file": "assets/jquery-BQXThELV.js",
+    "name": "jquery"
+  },
   "resources/assets/css/demo.css": {
     "file": "assets/demo-C9zMtG-C.css",
     "src": "resources/assets/css/demo.css",
@@ -52,6 +56,12 @@
     "file": "assets/main-Ccsc20-B.js",
     "name": "main",
     "src": "resources/assets/js/main.js",
+    "isEntry": true
+  },
+  "resources/assets/js/pages-auth-multisteps.js": {
+    "file": "assets/pages-auth-multisteps-CRBj8eZP.js",
+    "name": "pages-auth-multisteps",
+    "src": "resources/assets/js/pages-auth-multisteps.js",
     "isEntry": true
   },
   "resources/assets/js/pages-auth-two-steps.js": {
@@ -2326,6 +2336,25 @@
     "src": "resources/assets/vendor/libs/apex-charts/apex-charts.scss",
     "isEntry": true
   },
+  "resources/assets/vendor/libs/bootstrap-select/bootstrap-select.scss": {
+    "file": "assets/bootstrap-select-DiOujeOs.css",
+    "src": "resources/assets/vendor/libs/bootstrap-select/bootstrap-select.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/bs-stepper/bs-stepper.js": {
+    "file": "assets/bs-stepper-DltSnuT5.js",
+    "name": "bs-stepper",
+    "src": "resources/assets/vendor/libs/bs-stepper/bs-stepper.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
+  },
+  "resources/assets/vendor/libs/bs-stepper/bs-stepper.scss": {
+    "file": "assets/bs-stepper-wWSDvvN1.css",
+    "src": "resources/assets/vendor/libs/bs-stepper/bs-stepper.scss",
+    "isEntry": true
+  },
   "resources/assets/vendor/libs/cleave-zen/cleave-zen.js": {
     "file": "assets/cleave-zen-CtHmoKfQ.js",
     "name": "cleave-zen",
@@ -2349,12 +2378,13 @@
     "isEntry": true
   },
   "resources/assets/vendor/libs/jquery/jquery.js": {
-    "file": "assets/jquery-DJZKtFzf.js",
+    "file": "assets/jquery-Drw21Jpr.js",
     "name": "jquery",
     "src": "resources/assets/vendor/libs/jquery/jquery.js",
     "isEntry": true,
     "imports": [
-      "__commonjsHelpers-Cpj98o6Y.js"
+      "__commonjsHelpers-Cpj98o6Y.js",
+      "_jquery-BQXThELV.js"
     ]
   },
   "resources/assets/vendor/libs/node-waves/node-waves.js": {
@@ -2418,6 +2448,21 @@
     "imports": [
       "__commonjsHelpers-Cpj98o6Y.js"
     ]
+  },
+  "resources/assets/vendor/libs/select2/select2.js": {
+    "file": "assets/select2-DS1ttjr4.js",
+    "name": "select2",
+    "src": "resources/assets/vendor/libs/select2/select2.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js",
+      "_jquery-BQXThELV.js"
+    ]
+  },
+  "resources/assets/vendor/libs/select2/select2.scss": {
+    "file": "assets/select2-kvSJIS71.css",
+    "src": "resources/assets/vendor/libs/select2/select2.scss",
+    "isEntry": true
   },
   "resources/assets/vendor/libs/swiper/swiper.js": {
     "file": "assets/swiper-BkuLhYW5.js",

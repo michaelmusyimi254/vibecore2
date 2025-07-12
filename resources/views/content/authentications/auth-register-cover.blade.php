@@ -67,6 +67,61 @@ $configData = Helper::appClasses();
               <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye-off"></i></span>
             </div>
           </div>
+          
+          <!-- Role Selection -->
+          <div class="mb-6">
+            <label class="form-label">Choose Your Role</label>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="form-check custom-option custom-option-icon">
+                  <input class="form-check-input" type="radio" name="role" id="role-trainee" value="trainee" />
+                  <label class="form-check-label custom-option-content" for="role-trainee">
+                    <span class="custom-option-body">
+                      <i class="icon-base ti tabler-user text-primary mb-2" style="font-size: 2rem;"></i>
+                      <span class="custom-option-title">Trainee</span>
+                      <small class="custom-option-text">Join as a student to learn and grow</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check custom-option custom-option-icon">
+                  <input class="form-check-input" type="radio" name="role" id="role-trainer" value="trainer" />
+                  <label class="form-check-label custom-option-content" for="role-trainer">
+                    <span class="custom-option-body">
+                      <i class="icon-base ti tabler-dumbbell text-success mb-2" style="font-size: 2rem;"></i>
+                      <span class="custom-option-title">Trainer</span>
+                      <small class="custom-option-text">Share your expertise and teach others</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check custom-option custom-option-icon">
+                  <input class="form-check-input" type="radio" name="role" id="role-facility" value="facility" />
+                  <label class="form-check-label custom-option-content" for="role-facility">
+                    <span class="custom-option-body">
+                      <i class="icon-base ti tabler-building text-info mb-2" style="font-size: 2rem;"></i>
+                      <span class="custom-option-title">Facility</span>
+                      <small class="custom-option-text">Manage your fitness center or gym</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check custom-option custom-option-icon">
+                  <input class="form-check-input" type="radio" name="role" id="role-vendor" value="vendor" />
+                  <label class="form-check-label custom-option-content" for="role-vendor">
+                    <span class="custom-option-body">
+                      <i class="icon-base ti tabler-shopping-cart text-warning mb-2" style="font-size: 2rem;"></i>
+                      <span class="custom-option-title">Vendor</span>
+                      <small class="custom-option-text">Sell fitness products and services</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="mb-6 mt-8">
             <div class="form-check mb-8 ms-2 form-control-validation">
               <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />

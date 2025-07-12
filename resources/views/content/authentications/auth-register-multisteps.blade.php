@@ -128,6 +128,61 @@ $configData = Helper::appClasses();
                     <input type="text" name="multiStepsURL" id="multiStepsURL" class="form-control"
                       placeholder="johndoe/profile" aria-label="johndoe" />
                   </div>
+                  
+                  <!-- Role Selection -->
+                  <div class="col-md-12">
+                    <label class="form-label">Choose Your Role</label>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <div class="form-check custom-option custom-option-icon">
+                          <input class="form-check-input" type="radio" name="role" id="multiSteps-role-trainee" value="trainee" />
+                          <label class="form-check-label custom-option-content" for="multiSteps-role-trainee">
+                            <span class="custom-option-body">
+                              <i class="icon-base ti tabler-user text-primary mb-2" style="font-size: 1.5rem;"></i>
+                              <span class="custom-option-title">Trainee</span>
+                              <small class="custom-option-text">Join as a student to learn and grow</small>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-check custom-option custom-option-icon">
+                          <input class="form-check-input" type="radio" name="role" id="multiSteps-role-trainer" value="trainer" />
+                          <label class="form-check-label custom-option-content" for="multiSteps-role-trainer">
+                            <span class="custom-option-body">
+                              <i class="icon-base ti tabler-dumbbell text-success mb-2" style="font-size: 1.5rem;"></i>
+                              <span class="custom-option-title">Trainer</span>
+                              <small class="custom-option-text">Share your expertise and teach others</small>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-check custom-option custom-option-icon">
+                          <input class="form-check-input" type="radio" name="role" id="multiSteps-role-facility" value="facility" />
+                          <label class="form-check-label custom-option-content" for="multiSteps-role-facility">
+                            <span class="custom-option-body">
+                              <i class="icon-base ti tabler-building text-info mb-2" style="font-size: 1.5rem;"></i>
+                              <span class="custom-option-title">Facility</span>
+                              <small class="custom-option-text">Manage your fitness center or gym</small>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-check custom-option custom-option-icon">
+                          <input class="form-check-input" type="radio" name="role" id="multiSteps-role-vendor" value="vendor" />
+                          <label class="form-check-label custom-option-content" for="multiSteps-role-vendor">
+                            <span class="custom-option-body">
+                              <i class="icon-base ti tabler-shopping-cart text-warning mb-2" style="font-size: 1.5rem;"></i>
+                              <span class="custom-option-title">Vendor</span>
+                              <small class="custom-option-text">Sell fitness products and services</small>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="col-12 d-flex justify-content-between">
                     <button class="btn btn-label-secondary btn-prev" disabled>
                       <i class="icon-base ti tabler-arrow-left icon-xs me-sm-2 me-0"></i>

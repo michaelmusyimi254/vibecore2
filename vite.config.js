@@ -13,6 +13,9 @@ export default defineConfig({
                 'resources/assets/vendor/scss/pages/page-auth.scss',
                 'resources/assets/vendor/scss/pages/cards-advance.scss',
                 'resources/assets/vendor/libs/@form-validation/form-validation.scss',
+                'resources/assets/vendor/libs/bs-stepper/bs-stepper.scss',
+                'resources/assets/vendor/libs/bootstrap-select/bootstrap-select.scss',
+                'resources/assets/vendor/libs/select2/select2.scss',
                 'resources/assets/vendor/libs/apex-charts/apex-charts.scss',
                 'resources/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.scss',
                 'resources/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss',
@@ -52,7 +55,10 @@ export default defineConfig({
                 'resources/assets/vendor/js/menu.js',
                 'resources/assets/js/main.js',
                 'resources/assets/vendor/libs/cleave-zen/cleave-zen.js',
-                'resources/assets/js/pages-auth-two-steps.js'
+                'resources/assets/js/pages-auth-two-steps.js',
+                'resources/assets/vendor/libs/bs-stepper/bs-stepper.js',
+                'resources/assets/vendor/libs/select2/select2.js',
+                'resources/assets/js/pages-auth-multisteps.js'
             ],
             refresh: true,
         }),
