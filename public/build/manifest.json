@@ -48,6 +48,12 @@
     "src": "resources/assets/js/front-page-landing.js",
     "isEntry": true
   },
+  "resources/assets/js/main.js": {
+    "file": "assets/main-Ccsc20-B.js",
+    "name": "main",
+    "src": "resources/assets/js/main.js",
+    "isEntry": true
+  },
   "resources/assets/js/pages-auth.js": {
     "file": "assets/pages-auth-D0KVgRoL.js",
     "name": "pages-auth",
@@ -2256,6 +2262,12 @@
     "src": "resources/assets/vendor/js/mega-dropdown.js",
     "isEntry": true
   },
+  "resources/assets/vendor/js/menu.js": {
+    "file": "assets/menu-Cc3Gq5JA.js",
+    "name": "menu",
+    "src": "resources/assets/vendor/js/menu.js",
+    "isEntry": true
+  },
   "resources/assets/vendor/js/template-customizer.js": {
     "file": "assets/template-customizer-DLaa5T9Z.js",
     "name": "template-customizer",
@@ -2264,6 +2276,12 @@
     "css": [
       "assets/template-customizer-Dlk0cFN9.css"
     ]
+  },
+  "resources/assets/vendor/libs/@algolia/autocomplete-js.js": {
+    "file": "assets/autocomplete-js-BLyOkDc2.js",
+    "name": "autocomplete-js",
+    "src": "resources/assets/vendor/libs/@algolia/autocomplete-js.js",
+    "isEntry": true
   },
   "resources/assets/vendor/libs/@form-validation/auto-focus.js": {
     "file": "assets/auto-focus-gx3LVEfk.js",
@@ -2312,6 +2330,21 @@
     "src": "resources/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss",
     "isEntry": true
   },
+  "resources/assets/vendor/libs/hammer/hammer.js": {
+    "file": "assets/hammer-DLEdXtvS.js",
+    "name": "hammer",
+    "src": "resources/assets/vendor/libs/hammer/hammer.js",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/jquery/jquery.js": {
+    "file": "assets/jquery-DJZKtFzf.js",
+    "name": "jquery",
+    "src": "resources/assets/vendor/libs/jquery/jquery.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
+  },
   "resources/assets/vendor/libs/node-waves/node-waves.js": {
     "file": "assets/node-waves-D2Ayfcdi.js",
     "name": "node-waves",
@@ -2336,6 +2369,15 @@
     "file": "assets/nouislider-Drzsy2ay.css",
     "src": "resources/assets/vendor/libs/nouislider/nouislider.scss",
     "isEntry": true
+  },
+  "resources/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js": {
+    "file": "assets/perfect-scrollbar-AR-7agiL.js",
+    "name": "perfect-scrollbar",
+    "src": "resources/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
   },
   "resources/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.scss": {
     "file": "assets/perfect-scrollbar-CfyPsj0y.css",

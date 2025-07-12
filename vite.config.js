@@ -44,7 +44,13 @@ export default defineConfig({
                 'resources/assets/vendor/js/template-customizer.js',
                 'resources/assets/js/front-config.js',
                 'resources/assets/js/front-main.js',
-                'resources/assets/js/config.js'
+                'resources/assets/js/config.js',
+                'resources/assets/vendor/libs/jquery/jquery.js',
+                'resources/assets/vendor/libs/@algolia/autocomplete-js.js',
+                'resources/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js',
+                'resources/assets/vendor/libs/hammer/hammer.js',
+                'resources/assets/vendor/js/menu.js',
+                'resources/assets/js/main.js'
             ],
             refresh: true,
         }),
