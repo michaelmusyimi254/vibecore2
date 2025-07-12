@@ -38,7 +38,7 @@ $configData = Helper::appClasses();
       <div class="container position-relative" style="z-index:2;">
         <div class="hero-text-box text-center position-relative py-5">
           <h1 class="custom-hero-title fw-bold mb-3" style="color:#fff !important; font-size:2.8rem; letter-spacing:-0.02em;">Enrich Your Wellness Journey</h1>
-          <h2 class="custom-hero-subtitle mb-4" style="color:#fff; font-size:1.35rem; font-weight:400;">
+          <h2 class="custom-hero-subtitle mb-4" style="color:#fff !important; font-size:1.35rem; font-weight:400;">
             Connect with trainers, discover facilities, join events,<br class="d-none d-md-block" />
             and shop for fitness gear all in one place.
           </h2>
