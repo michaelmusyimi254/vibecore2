@@ -1,5 +1,24 @@
 // This file is used for writing your custom styles
 
+// Logo theme switching styles
+[data-bs-theme="light"] {
+  .logo-light {
+    display: block !important;
+  }
+  .logo-dark {
+    display: none !important;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .logo-light {
+    display: none !important;
+  }
+  .logo-dark {
+    display: block !important;
+  }
+}
+
 // .card {
 //    background-color: #fd0000;
 //  }
