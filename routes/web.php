@@ -68,51 +68,51 @@ Route::middleware(['auth'])->group(function () {
     // Facility Dashboard
     Route::prefix('facility')->middleware(['role:facility'])->group(function () {
         Route::get('/dashboard', function () {
-            return view('dashboards.facility.dashboard');
+            return view('content.dashboard.dashboards-analytics');
         })->name('facility.dashboard');
         Route::get('/schedule', function () {
-            return view('dashboards.facility.schedule');
+            return view('content.apps.app-calendar');
         })->name('facility.schedule');
         Route::get('/gallery', function () {
-            return view('dashboards.facility.gallery');
+            return view('content.apps.app-ecommerce-product-list');
         })->name('facility.gallery');
         Route::get('/reviews', function () {
-            return view('dashboards.facility.reviews');
+            return view('content.apps.app-ecommerce-manage-reviews');
         })->name('facility.reviews');
         Route::get('/profile', function () {
-            return view('dashboards.facility.profile');
+            return view('content.pages.pages-profile-user');
         })->name('facility.profile');
     });
 
     // Vendor Dashboard
     Route::prefix('vendor')->middleware(['role:vendor'])->group(function () {
         Route::get('/dashboard', function () {
-            return view('dashboards.vendor.dashboard');
+            return view('content.apps.app-ecommerce-dashboard');
         })->name('vendor.dashboard');
         Route::get('/shop-manager', function () {
-            return view('dashboards.vendor.shop-manager');
+            return view('content.apps.app-ecommerce-product-list');
         })->name('vendor.shop-manager');
         Route::get('/profile', function () {
-            return view('dashboards.vendor.profile');
+            return view('content.pages.pages-profile-user');
         })->name('vendor.profile');
     });
 
     // Admin Dashboard
     Route::prefix('admin')->middleware(['role:admin'])->group(function () {
         Route::get('/dashboard', function () {
-            return view('dashboards.admin.dashboard');
+            return view('content.dashboard.dashboards-analytics');
         })->name('admin.dashboard');
         Route::get('/users', function () {
-            return view('dashboards.admin.users');
+            return view('content.apps.app-user-list');
         })->name('admin.users');
         Route::get('/content', function () {
-            return view('dashboards.admin.content');
+            return view('content.apps.app-ecommerce-category-list');
         })->name('admin.content');
         Route::get('/payments', function () {
-            return view('dashboards.admin.payments');
+            return view('content.apps.app-invoice-list');
         })->name('admin.payments');
         Route::get('/reports', function () {
-            return view('dashboards.admin.reports');
+            return view('content.apps.app-ecommerce-dashboard');
         })->name('admin.reports');
     });
 });
@@ -123,17 +123,17 @@ Route::get('/', function () {
 })->middleware('redirect.based.on.role')->name('home');
 
 Route::get('/facilities', function () {
-    return view('public.facilities');
+    return view('content.apps.app-ecommerce-product-list');
 })->name('facilities');
 
 Route::get('/trainers', function () {
-    return view('public.trainers');
+    return view('content.apps.app-user-list');
 })->name('trainers');
 
 Route::get('/shop', function () {
-    return view('public.shop');
+    return view('content.apps.app-ecommerce-product-list');
 })->name('shop');
 
 Route::get('/events', function () {
-    return view('public.events');
+    return view('content.apps.app-calendar');
 })->name('events');
