@@ -4,30 +4,32 @@ $configData = Helper::appClasses();
 
 <div class="smart-search-container position-relative">
   <!-- Search Form -->
-  <div class="search-form-wrapper">
-    <form class="smart-search-form d-flex flex-wrap align-items-center gap-2" action="{{ route('search.results') }}" method="GET" style="width:100%">
+  <div class="search-form-wrapper glassy-bar">
+    <form class="smart-search-form d-flex flex-row align-items-center w-100 gap-3" action="{{ route('search.results') }}" method="GET" style="width:100%">
       <input 
         type="text" 
         name="query" 
         class="form-control search-input flex-grow-1"
-        placeholder="Search for trainers, facilities, or events..."
+        placeholder="Search trainers, facilities, products."
         autocomplete="off"
         id="smartSearchInput"
+        style="min-width:220px; background:rgba(255,255,255,0.18); color:#fff; border:none; box-shadow:none;"
       />
-      <select name="location" class="form-select search-filter">
-        <option value="">Any Location</option>
-        <option value="nearby">Nearby</option>
-        <option value="city">Same City</option>
-        <option value="region">Same Region</option>
-      </select>
-      <button type="submit" class="btn search-btn">Search</button>
+      <input 
+        type="text" 
+        name="location" 
+        class="form-control search-input flex-grow-1"
+        placeholder="City / Postcode (optional)"
+        autocomplete="off"
+        style="min-width:180px; background:rgba(255,255,255,0.18); color:#fff; border:none; box-shadow:none;"
+      />
+      <button type="submit" class="btn search-btn" style="font-weight:700; font-size:1.1rem; padding:0.7rem 2.2rem; border-radius:2rem;">Search</button>
     </form>
   </div>
 
-  <!-- Popular Searches -->
+  <!-- Popular Tags (no heading) -->
   <div class="popular-searches mt-3">
-    <div class="popular-tags-heading mb-1 small text-muted text-center" style="font-weight: 600; letter-spacing: 0.03em;">Popular tags</div>
-    <div class="popular-tags d-flex flex-wrap justify-content-center gap-2" id="popularTagsContainer">
+    <div class="popular-tags d-flex flex-row flex-wrap justify-content-center gap-3" id="popularTagsContainer">
       <!-- Dynamic tags will be injected here -->
     </div>
   </div>
@@ -41,145 +43,96 @@ $configData = Helper::appClasses();
   z-index: 10;
 }
 
-.search-form-wrapper {
+.glassy-bar {
   background: rgba(255,255,255,0.13);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
   border-radius: 2.5rem;
-  padding: 0.7rem 1.2rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 0.9rem 2.2rem;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.13);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255,255,255,0.13);
+  border: 1.5px solid rgba(255,255,255,0.22);
 }
-[data-bs-theme="dark"] .search-form-wrapper {
-  background: rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.10);
-}
-
 .smart-search-form {
   width: 100%;
-  gap: 0.5rem;
+  gap: 1.1rem;
 }
-
 .search-input {
-  background: rgba(255,255,255,0.92);
-  border: none;
-  border-radius: 2rem;
-  padding: 0.7rem 1.2rem;
-  font-size: 1.05rem;
-  color: #444;
+  background: rgba(255,255,255,0.18) !important;
+  border: none !important;
+  border-radius: 2rem !important;
+  padding: 0.9rem 1.5rem !important;
+  font-size: 1.15rem !important;
+  color: #fff !important;
   min-width: 180px;
-  height: 2.5rem;
-  box-shadow: none;
+  height: 2.8rem !important;
+  box-shadow: none !important;
   transition: all 0.2s;
 }
-[data-bs-theme="dark"] .search-input {
-  background: rgba(0,0,0,0.32);
-  color: #fff;
+.search-input::placeholder {
+  color: #fff !important;
+  opacity: 0.85;
 }
-.search-input:focus {
-  background: rgba(255,255,255,1);
-  outline: none;
-}
-[data-bs-theme="dark"] .search-input:focus {
-  background: rgba(0,0,0,0.45);
-}
-
-.search-filter {
-  background: rgba(255,255,255,0.92);
-  border: none;
-  border-radius: 2rem;
-  padding: 0.7rem 1.2rem;
-  font-size: 1.05rem;
-  color: #444;
-  min-width: 150px;
-  height: 2.5rem;
-  font-weight: 500;
-  box-shadow: none;
-  transition: all 0.2s;
-}
-[data-bs-theme="dark"] .search-filter {
-  background: rgba(0,0,0,0.32);
-  color: #fff;
-}
-.search-filter:focus {
-  background: rgba(255,255,255,1);
-  outline: none;
-}
-[data-bs-theme="dark"] .search-filter:focus {
-  background: rgba(0,0,0,0.45);
-}
-
 .search-btn {
-  background: #fff;
-  color: #222;
-  border: none;
-  border-radius: 2rem;
-  padding: 0.7rem 2.1rem;
+  background: #fff !important;
+  color: #222 !important;
+  border: none !important;
+  border-radius: 2rem !important;
+  padding: 0.9rem 2.2rem !important;
   font-weight: 700;
-  font-size: 1.08rem;
-  height: 2.5rem;
+  font-size: 1.1rem;
+  height: 2.8rem !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   transition: all 0.2s;
   letter-spacing: 0.01em;
 }
 .search-btn:hover {
-  background: #f2f2f2;
-  color: #007bff;
+  background: #f2f2f2 !important;
+  color: #007bff !important;
   transform: translateY(-1px) scale(1.03);
 }
-
 .popular-searches {
   text-align: center;
   margin-top: 1.1rem;
 }
-
 .popular-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1.1rem;
   justify-content: center;
 }
-
 .popular-tag {
   display: inline-block;
   background: rgba(255,255,255,0.18);
-  color: #333;
-  padding: 0.5rem 1.3rem;
+  color: #fff;
+  padding: 0.6rem 2.1rem;
   border-radius: 2rem;
-  font-size: 0.98rem;
+  font-size: 1.08rem;
   font-weight: 500;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.13);
+  border: 1.5px solid rgba(255,255,255,0.22);
   transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-[data-bs-theme="dark"] .popular-tag {
-  background: rgba(0,0,0,0.28);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  backdrop-filter: blur(8px);
 }
 .popular-tag:hover {
-  background: rgba(0,123,255,0.12);
-  color: #007bff;
+  background: rgba(255,255,255,0.32);
+  color: #fff;
   text-decoration: none;
   transform: translateY(-1px) scale(1.04);
 }
-[data-bs-theme="dark"] .popular-tag:hover {
-  background: rgba(0,123,255,0.18);
-  color: #fff;
-}
-
 @media (max-width: 900px) {
   .smart-search-container { max-width: 100%; }
-  .search-form-wrapper { padding: 0.5rem 0.3rem; }
-  .search-input, .search-filter, .search-btn { font-size: 0.98rem; height: 2.1rem; padding: 0.4rem 0.8rem; }
+  .glassy-bar { padding: 0.6rem 0.7rem; }
+  .search-input, .search-btn { font-size: 1rem !important; height: 2.2rem !important; padding: 0.5rem 1rem !important; }
+  .popular-tag { font-size: 0.98rem; padding: 0.5rem 1.2rem; }
 }
 @media (max-width: 600px) {
   .smart-search-form { flex-direction: column; gap: 0.5rem; }
-  .search-form-wrapper { border-radius: 1.2rem; }
-  .search-input, .search-filter, .search-btn { width: 100%; min-width: 0; }
+  .glassy-bar { border-radius: 1.2rem; }
+  .search-input, .search-btn { width: 100%; min-width: 0; }
+  .popular-tag { width: 100%; min-width: 0; text-align: center; }
 }
 </style>
 
