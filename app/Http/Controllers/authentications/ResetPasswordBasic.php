@@ -9,7 +9,7 @@ class ResetPasswordBasic extends Controller
 {
   public function index()
   {
-    $pageConfigs = ['myLayout' => 'blank'];
+    $pageConfigs = ['myLayout' => 'login'];
     return view('content.authentications.auth-reset-password-basic', ['pageConfigs' => $pageConfigs]);
   }
 }

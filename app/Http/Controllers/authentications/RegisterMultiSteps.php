@@ -9,7 +9,7 @@ class RegisterMultiSteps extends Controller
 {
   public function index()
   {
-    $pageConfigs = ['myLayout' => 'blank'];
+    $pageConfigs = ['myLayout' => 'login'];
     return view('content.authentications.auth-register-multisteps', ['pageConfigs' => $pageConfigs]);
   }
 }

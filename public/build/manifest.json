@@ -54,6 +54,12 @@
     "src": "resources/assets/js/main.js",
     "isEntry": true
   },
+  "resources/assets/js/pages-auth-two-steps.js": {
+    "file": "assets/pages-auth-two-steps-Do6tkwDp.js",
+    "name": "pages-auth-two-steps",
+    "src": "resources/assets/js/pages-auth-two-steps.js",
+    "isEntry": true
+  },
   "resources/assets/js/pages-auth.js": {
     "file": "assets/pages-auth-D0KVgRoL.js",
     "name": "pages-auth",
@@ -2318,6 +2324,12 @@
   "resources/assets/vendor/libs/apex-charts/apex-charts.scss": {
     "file": "assets/apex-charts-CXgdmaYc.css",
     "src": "resources/assets/vendor/libs/apex-charts/apex-charts.scss",
+    "isEntry": true
+  },
+  "resources/assets/vendor/libs/cleave-zen/cleave-zen.js": {
+    "file": "assets/cleave-zen-CtHmoKfQ.js",
+    "name": "cleave-zen",
+    "src": "resources/assets/vendor/libs/cleave-zen/cleave-zen.js",
     "isEntry": true
   },
   "resources/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.scss": {

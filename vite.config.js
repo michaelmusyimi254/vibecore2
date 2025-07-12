@@ -50,7 +50,9 @@ export default defineConfig({
                 'resources/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js',
                 'resources/assets/vendor/libs/hammer/hammer.js',
                 'resources/assets/vendor/js/menu.js',
-                'resources/assets/js/main.js'
+                'resources/assets/js/main.js',
+                'resources/assets/vendor/libs/cleave-zen/cleave-zen.js',
+                'resources/assets/js/pages-auth-two-steps.js'
             ],
             refresh: true,
         }),

@@ -3,7 +3,7 @@ $customizerHidden = 'customizer-hide';
 $configData = Helper::appClasses();
 @endphp
 
-@extends('layouts/layoutMaster')
+@extends('layouts/layoutLogin')
 
 @section('title', 'Register Cover - Pages')
 
@@ -27,12 +27,6 @@ $configData = Helper::appClasses();
 
 @section('content')
 <div class="authentication-wrapper authentication-cover">
-  <!-- Logo -->
-  <a href="{{ url('/') }}" class="app-brand auth-cover-brand">
-    <span class="app-brand-logo demo">@include('_partials.macros')</span>
-    <span class="app-brand-text demo text-heading fw-bold">{{ config('variables.templateName') }}</span>
-  </a>
-  <!-- /Logo -->
   <div class="authentication-inner row m-0">
     <!-- /Left Text -->
     <div class="d-none d-xl-flex col-xl-8 p-0">

@@ -9,7 +9,7 @@ class ResetPasswordCover extends Controller
 {
   public function index()
   {
-    $pageConfigs = ['myLayout' => 'blank'];
+    $pageConfigs = ['myLayout' => 'login'];
     return view('content.authentications.auth-reset-password-cover', ['pageConfigs' => $pageConfigs]);
   }
 }

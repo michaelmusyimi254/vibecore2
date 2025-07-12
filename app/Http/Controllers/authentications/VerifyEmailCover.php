@@ -9,7 +9,7 @@ class VerifyEmailCover extends Controller
 {
   public function index()
   {
-    $pageConfigs = ['myLayout' => 'blank'];
+    $pageConfigs = ['myLayout' => 'login'];
     return view('content.authentications.auth-verify-email-cover', ['pageConfigs' => $pageConfigs]);
   }
 }
