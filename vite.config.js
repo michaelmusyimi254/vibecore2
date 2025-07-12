@@ -43,7 +43,8 @@ export default defineConfig({
                 'resources/assets/vendor/js/helpers.js',
                 'resources/assets/vendor/js/template-customizer.js',
                 'resources/assets/js/front-config.js',
-                'resources/assets/js/front-main.js'
+                'resources/assets/js/front-main.js',
+                'resources/assets/js/config.js'
             ],
             refresh: true,
         }),

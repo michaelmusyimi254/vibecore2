@@ -12,6 +12,12 @@
     "src": "resources/assets/css/demo.css",
     "isEntry": true
   },
+  "resources/assets/js/config.js": {
+    "file": "assets/config-BoP0Nie5.js",
+    "name": "config",
+    "src": "resources/assets/js/config.js",
+    "isEntry": true
+  },
   "resources/assets/js/dashboards-analytics.js": {
     "file": "assets/dashboards-analytics-B5eGrKbf.js",
     "name": "dashboards-analytics",
