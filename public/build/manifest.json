@@ -30,6 +30,12 @@
     "src": "resources/assets/js/front-config.js",
     "isEntry": true
   },
+  "resources/assets/js/front-main.js": {
+    "file": "assets/front-main-CElD4HFv.js",
+    "name": "front-main",
+    "src": "resources/assets/js/front-main.js",
+    "isEntry": true
+  },
   "resources/assets/js/front-page-landing.js": {
     "file": "assets/front-page-landing-BgdtDL36.js",
     "name": "front-page-landing",
@@ -2290,24 +2296,6 @@
     "src": "resources/assets/vendor/libs/apex-charts/apex-charts.scss",
     "isEntry": true
   },
-  "resources/assets/vendor/libs/apex-charts/apexcharts.js": {
-    "file": "assets/apexcharts-B3ux36Jq.js",
-    "name": "apexcharts",
-    "src": "resources/assets/vendor/libs/apex-charts/apexcharts.js",
-    "isEntry": true,
-    "imports": [
-      "__commonjsHelpers-Cpj98o6Y.js"
-    ]
-  },
-  "resources/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js": {
-    "file": "assets/datatables-bootstrap5-Bjd-SzqY.js",
-    "name": "datatables-bootstrap5",
-    "src": "resources/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js",
-    "isEntry": true,
-    "imports": [
-      "__commonjsHelpers-Cpj98o6Y.js"
-    ]
-  },
   "resources/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.scss": {
     "file": "assets/datatables-D6mlTnVo.css",
     "src": "resources/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.scss",
@@ -2317,6 +2305,15 @@
     "file": "assets/responsive-DCmsTaSd.css",
     "src": "resources/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss",
     "isEntry": true
+  },
+  "resources/assets/vendor/libs/node-waves/node-waves.js": {
+    "file": "assets/node-waves-D2Ayfcdi.js",
+    "name": "node-waves",
+    "src": "resources/assets/vendor/libs/node-waves/node-waves.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
   },
   "resources/assets/vendor/libs/node-waves/node-waves.scss": {
     "file": "assets/node-waves--n8WzYZJ.css",
@@ -2338,6 +2335,15 @@
     "file": "assets/pickr-themes-C9a2eCBH.css",
     "src": "resources/assets/vendor/libs/pickr/pickr-themes.scss",
     "isEntry": true
+  },
+  "resources/assets/vendor/libs/pickr/pickr.js": {
+    "file": "assets/pickr-tGLziiad.js",
+    "name": "pickr",
+    "src": "resources/assets/vendor/libs/pickr/pickr.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
   },
   "resources/assets/vendor/libs/popper/popper.js": {
     "file": "assets/popper-C1H6IGLQ.js",
