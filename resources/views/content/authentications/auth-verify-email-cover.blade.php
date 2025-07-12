@@ -32,7 +32,7 @@ $configData = Helper::appClasses();
 
     <!--  Verify email -->
     <div class="d-flex col-12 col-xl-4 align-items-center authentication-bg p-6 p-sm-12">
-      <div class="w-px-400 mx-auto mt-12 mt-5">
+      <div class="w-px-400 mx-auto mt-12 mt-5" style="margin-right: 2rem;">
         <h4 class="mb-1">Verify your email ✉️</h4>
         <p class="text-start mb-0">Account activation link sent to your email address: <span
             class="fw-medium">hello@example.com</span> Please follow the link inside to continue.</p>

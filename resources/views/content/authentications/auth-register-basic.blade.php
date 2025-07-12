@@ -30,7 +30,7 @@ $customizerHidden = 'customizer-hide';
     <div class="authentication-inner py-6">
       <!-- Register Card -->
       <div class="card">
-        <div class="card-body">
+        <div class="card-body" style="padding-right: 2rem;">
           <!-- Logo -->
           <div class="app-brand justify-content-center mb-6">
             <a href="{{ url('/') }}" class="app-brand-link">

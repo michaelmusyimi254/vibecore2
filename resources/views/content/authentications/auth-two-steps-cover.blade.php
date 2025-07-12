@@ -45,7 +45,7 @@ $configData = Helper::appClasses();
 
     <!-- Two Steps Verification -->
     <div class="d-flex col-12 col-xl-4 align-items-center authentication-bg p-6 p-sm-12">
-      <div class="w-px-400 mx-auto mt-12 mt-5">
+      <div class="w-px-400 mx-auto mt-12 mt-5" style="margin-right: 2rem;">
         <h4 class="mb-1">Two Step Verification 💬</h4>
         <p class="text-start mb-6">
           We sent a verification code to your mobile. Enter the code from the mobile in the field below.
