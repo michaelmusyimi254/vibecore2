@@ -132,7 +132,21 @@ $configData = Helper::appClasses();
   .smart-search-form { flex-direction: column; gap: 0.4rem; }
   .glassy-bar { border-radius: 0.8rem; }
   .search-input, .search-btn { width: 100%; min-width: 0; }
-  .popular-tag { width: 100%; min-width: 0; text-align: center; }
+  .popular-tags {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.6rem;
+    justify-content: flex-start;
+  }
+  .popular-tag {
+    width: auto;
+    min-width: unset;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.92rem;
+    padding: 0.3rem 0.7rem;
+  }
 }
 </style>
 
