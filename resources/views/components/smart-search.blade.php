@@ -6,34 +6,21 @@ $configData = Helper::appClasses();
   <!-- Search Form -->
   <div class="search-form-wrapper">
     <form class="smart-search-form d-flex flex-wrap align-items-center gap-2" action="{{ route('search.results') }}" method="GET" style="width:100%">
-      <div class="search-input-wrapper flex-grow-1 position-relative">
-        <i class="icon-base ti tabler-search search-icon"></i>
-        <input 
-          type="text" 
-          name="query" 
-          class="form-control search-input"
-          placeholder="Search for trainers, facilities, or events..."
-          autocomplete="off"
-          id="smartSearchInput"
-        />
-        <div class="search-suggestions" id="searchSuggestions"></div>
-      </div>
-      <select name="category" class="form-select search-filter">
-        <option value="">All Categories</option>
-        <option value="trainer">Trainers</option>
-        <option value="facility">Facilities</option>
-        <option value="event">Events</option>
-      </select>
+      <input 
+        type="text" 
+        name="query" 
+        class="form-control search-input flex-grow-1"
+        placeholder="Search for trainers, facilities, or events..."
+        autocomplete="off"
+        id="smartSearchInput"
+      />
       <select name="location" class="form-select search-filter">
         <option value="">Any Location</option>
         <option value="nearby">Nearby</option>
         <option value="city">Same City</option>
         <option value="region">Same Region</option>
       </select>
-      <button type="submit" class="btn search-btn d-flex align-items-center justify-content-center">
-        <i class="icon-base ti tabler-search me-2"></i>
-        <span>Search</span>
-      </button>
+      <button type="submit" class="btn search-btn">Search</button>
     </form>
   </div>
 
@@ -59,15 +46,15 @@ $configData = Helper::appClasses();
 }
 
 .search-form-wrapper {
-  background: rgba(255,255,255,0.10);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.13);
+  backdrop-filter: blur(10px);
   border-radius: 2.5rem;
-  padding: 1.1rem 1.5rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255,255,255,0.13);
 }
 [data-bs-theme="dark"] .search-form-wrapper {
   background: rgba(0,0,0,0.18);
@@ -76,31 +63,24 @@ $configData = Helper::appClasses();
 
 .smart-search-form {
   width: 100%;
-  gap: 0.7rem;
-}
-
-.search-input-wrapper {
-  position: relative;
-  flex: 2 1 250px;
-  min-width: 180px;
+  gap: 0.5rem;
 }
 
 .search-input {
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.92);
   border: none;
   border-radius: 2rem;
-  padding: 0.85rem 1.1rem 0.85rem 2.7rem;
-  font-size: 1.08rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.05rem;
   color: #444;
-  transition: all 0.2s;
-  box-shadow: none;
   min-width: 180px;
-  height: 2.8rem;
+  height: 2.5rem;
+  box-shadow: none;
+  transition: all 0.2s;
 }
 [data-bs-theme="dark"] .search-input {
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.32);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.10);
 }
 .search-input:focus {
   background: rgba(255,255,255,1);
@@ -110,36 +90,22 @@ $configData = Helper::appClasses();
   background: rgba(0,0,0,0.45);
 }
 
-.search-icon {
-  position: absolute;
-  left: 1.1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #007bff;
-  font-size: 1.25rem;
-  z-index: 2;
-}
-[data-bs-theme="dark"] .search-icon {
-  color: #fff;
-}
-
 .search-filter {
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.92);
   border: none;
   border-radius: 2rem;
-  padding: 0.85rem 1.2rem;
-  font-size: 1.02rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.05rem;
   color: #444;
   min-width: 150px;
-  height: 2.8rem;
+  height: 2.5rem;
   font-weight: 500;
   box-shadow: none;
   transition: all 0.2s;
 }
 [data-bs-theme="dark"] .search-filter {
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.32);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.10);
 }
 .search-filter:focus {
   background: rgba(255,255,255,1);
@@ -150,30 +116,27 @@ $configData = Helper::appClasses();
 }
 
 .search-btn {
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  background: #fff;
+  color: #222;
   border: none;
   border-radius: 2rem;
-  padding: 0.85rem 2.2rem;
-  font-weight: 600;
+  padding: 0.7rem 2.1rem;
+  font-weight: 700;
   font-size: 1.08rem;
-  color: #fff;
-  height: 2.8rem;
-  box-shadow: 0 2px 8px rgba(0,123,255,0.10);
+  height: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  letter-spacing: 0.01em;
 }
 .search-btn:hover {
-  background: linear-gradient(135deg, #0056b3, #007bff);
-  color: #fff;
+  background: #f2f2f2;
+  color: #007bff;
   transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 4px 16px rgba(0,123,255,0.18);
 }
 
 .popular-searches {
   text-align: center;
-  margin-top: 1.2rem;
+  margin-top: 1.1rem;
 }
 
 .popular-tags {
@@ -192,7 +155,7 @@ $configData = Helper::appClasses();
   font-size: 0.98rem;
   font-weight: 500;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.13);
   transition: all 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -212,52 +175,10 @@ $configData = Helper::appClasses();
   color: #fff;
 }
 
-.search-suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: none;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-[data-bs-theme="dark"] .search-suggestions {
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.suggestion-item {
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease;
-}
-
-[data-bs-theme="dark"] .suggestion-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.suggestion-item:hover {
-  background: rgba(0, 123, 255, 0.1);
-}
-
-[data-bs-theme="dark"] .suggestion-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.suggestion-item:last-child {
-  border-bottom: none;
-}
-
 @media (max-width: 900px) {
   .smart-search-container { max-width: 100%; }
-  .search-form-wrapper { padding: 0.7rem 0.5rem; }
-  .search-input, .search-filter, .search-btn { font-size: 0.98rem; height: 2.3rem; padding: 0.5rem 1rem; }
+  .search-form-wrapper { padding: 0.5rem 0.3rem; }
+  .search-input, .search-filter, .search-btn { font-size: 0.98rem; height: 2.1rem; padding: 0.4rem 0.8rem; }
 }
 @media (max-width: 600px) {
   .smart-search-form { flex-direction: column; gap: 0.5rem; }
